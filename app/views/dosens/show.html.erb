@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @dosen.nama %>
+</p>
+
+<p>
+  <strong>Tanggal lahir:</strong>
+  <%= @dosen.tanggal_lahir %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @dosen.alamat %>
+</p>
+
+<p>
+  <strong>Pendidikan terakhir:</strong>
+  <%= @dosen.pendidikan_terakhir %>
+</p>
+
+<p>
+  <strong>No telp:</strong>
+  <%= @dosen.no_telp %>
+</p>
+
+<p>
+  <strong>Jabatan:</strong>
+  <%= @dosen.jabatan %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@dosen.picture_url, width: 600) if @dosen.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_dosen_path(@dosen) %> |
+<%= link_to 'Back', dosens_path %>

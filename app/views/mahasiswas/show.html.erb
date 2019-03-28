@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @mahasiswa.nama %>
+</p>
+
+<p>
+  <strong>Tanggal lahir:</strong>
+  <%= @mahasiswa.tanggal_lahir %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @mahasiswa.alamat %>
+</p>
+
+<p>
+  <strong>Jurusan:</strong>
+  <%= @mahasiswa.jurusan %>
+</p>
+
+<p>
+  <strong>No telp:</strong>
+  <%= @mahasiswa.no_telp %>
+</p>
+
+<p>
+  <strong>Angkatan:</strong>
+  <%= @mahasiswa.angkatan %>
+</p>
+
+<p>
+  <strong>Kepala prodi:</strong>
+  <%= @mahasiswa.kepala_prodi %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@mahasiswa.picture_url, width: 600) if @mahasiswa.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_mahasiswa_path(@mahasiswa) %> |
+<%= link_to 'Back', mahasiswas_path %>

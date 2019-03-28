@@ -1,0 +1,52 @@
+<%= form_with(model: dosen, local: true) do |form| %>
+  <% if dosen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dosen.errors.count, "error") %> prohibited this dosen from being saved:</h2>
+
+      <ul>
+      <% dosen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nama %>
+    <%= form.text_field :nama %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tanggal_lahir %>
+    <%= form.date_select :tanggal_lahir %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat %>
+    <%= form.text_area :alamat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pendidikan_terakhir %>
+    <%= form.text_field :pendidikan_terakhir %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_telp %>
+    <%= form.text_field :no_telp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jabatan %>
+    <%= form.text_field :jabatan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :dosen_picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
